@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>快手系统提示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .header {
+      background-color: #ff5722;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    .modal {
+      background-color: white;
+      margin: 80px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+
+    .modal h1 {
+      color: #ff5722;
+      font-size: 24px;
+    }
+
+    .modal p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .modal img {
+      width: 120px;
+      margin-top: 15px;
+    }
+
+    .button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #e64a19;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">系统通知 · 快手官方</div>
+
+  <div class="modal">
+    <h1>🎉 恭喜中奖！</h1>
+    <p>系统检测到你是今日直播间第 <strong>100000</strong> 位幸运观众！</p>
+    <p>你获得了 <strong>iPhone 15 Pro Max + 现金红包888元</strong></p>
+    <img src="https://img.alicdn.com/imgextra/i1/2215142798999/O1CN01E5i6Gx1zRJXKibcxu_!!0-item_pic.jpg" alt="iPhone 15">
+    <button class="button" onclick="reveal()">立即领取</button>
+  </div>
+
+  <div class="footer">快手直播 · KS System v3.2</div>
+
+  <script>
+    function reveal() {
+      alert("😆 哈哈你被整啦！这是一个假的中奖页面，别太激动！");
+      document.querySelector('.modal').innerHTML = `
+        <h1>😜 中招了吧？</h1>
+        <p>这只是个恶搞页面，不是真的中奖哦！</p>
+        <p>快发给你的好友看看谁上钩！</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
